@@ -35,7 +35,7 @@
       <!-- Carousel -->
       <div class="carousel carousel-slider center" data-indicators="false" style="height: 660px">
         <div class="carousel-fixed-item center">
-          <a class="btn waves-effect white grey-text darken-text-2 prossimo">Click Here To Learn More</a>
+          <a class="btn waves-effect white grey-text darken-text-2 prossimo" style="top: 22px">Click Here To Learn More</a>
         </div>
         <div class="carousel-item blue white-text" href="#one!">
           <h1><strong>Cogil Ultra Clean Filler</strong></h1>
@@ -51,7 +51,10 @@
         </div>
     </div>
 
+    <!-- XXXXXXXXXXXXXXXXX -->
     <!-- MACHINE DATA PART -->
+    <!-- XXXXXXXXXXXXXXXXX -->
+
 <div class="container blue-text">
   <h1 class="center-align titolocomponenti blue-text"><strong>Machines and components of the Ultraclean Line</strong></h1>
   <ul class="popout collapsible" data-collapsible="accordion">
@@ -117,19 +120,21 @@
       <h2 class="center-align"><i class="mdi mdi-file-document"></i></h2>
       <h5 class="center-align">Official Documentation</h5>
       <p class="light center-align">100% Made in Italy quality. Take a look at our in depth technical manual</p>
-        <a class="waves-effect waves-teal btn-flat">click here to access docs</a>
+        <p class="center-align"><a class="waves-effect waves-teal btn-flat" target="_blank" href="http://en.calameo.com/read/001228188e57f1c7bfcc7">click here for the official manual</a></p>
     </div>
     <div class="col s12 m12 l4">
       <h2 class="center-align"><i class="mdi mdi-video"></i></h2>
       <h5 class="center-align">Demonstration Video</h5>
       <p class="light center-align">We thoroughly tested every component to assure excellent quality of operation</p>
-      <a class="waves-effect waves-teal btn-flat center-align">Watch ultraclean operating</a>
+      <p class="center-align"><a class="waves-effect waves-teal btn-flat center-align" data-target="modalVideo">Watch ultraclean operating</a></p>
     </div>
     <div class="col s12 m12 l4">
       <h2 class="center-align"><i class="mdi mdi-wrench"></i></h2>
       <h5 class="center-align">Technical Layout</h5>
       <p class="light center-align">Our line is ready to ship and install. Check out the technical layout.</p>
-      <a class="waves-effect waves-teal btn-flat center-align">Click here for the Layout ultraclean</a>
+      <p class="center-align">
+        <a class="waves-effect waves-teal btn-flat techlayout" data-target="modalTechLayout">See the technical Layout</a>
+      </p>
     </div>
   </div>
 </div>
@@ -139,60 +144,104 @@
 <div class="container blue-text">
   <div class="row">
     <h1 class="center-align titolocomponenti blue-text"><strong>Interested? Contact Us!</strong></h1>
+    <p class="center-align">Shoot us an email at <a href="mailto:info@cogil.com">defaveri@cogil.com</a> or fill out the form below:</p><br>
     <!-- FORM starts here -->
-    <form class="col s12">
+    <form class="col s12" action="https://formspree.io/bitfede@hotmail.com" method="POST">
       <!-- full name TODO -->
       <div class="row">
         <div class="col s1 l3 m3">
         </div>
           <div class="input-field col l3 m3 s5">
-            <input id="first_name" type="text" class="validate">
-            <label for="first_name">First Name</label>
+            <input name="firstName" id="first_name" type="text" class="validate">
+            <label for="first_name">First Name<i class="mdi mdi-account left"></i></label>
           </div>
           <div class="input-field col l3 m3 s5">
-            <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
+            <input name="lastName" id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name<i class="mdi mdi-account left"></i></label>
           </div>
         <div class="col s1 m3 l3">
         </div>        
     </div>
-        <!-- email -->    
+        <!-- company -->    
     <div class="row">
       <div class="col s3">
       </div>
         <div class="input-field col s6">
-          <input id="email" type="email" class="validate">
-          <label for="email" data-error="wrong" data-success="right">Email</label>
+          <input name="company" id="company" type="text" class="validate">
+          <label for="company">Company<i class="mdi mdi-store left"></i></label>
         </div>
       <div class="col s3">
       </div>        
       </div>
-    <!-- company TODO-->
+    <!-- email -->
       <div class="row">
         <div class="col s3">
         </div>
           <div class="input-field col s6">
-            <input id="email" type="email" class="validate">
-            <label for="email" data-error="wrong" data-success="right">Email</label>
+            <input name="email" id="email" type="email" class="validate">
+            <label for="email" data-error="wrong" data-success="right">Email<i class="mdi mdi-email-outline left"></i></label>
           </div>
         <div class="col s3">
         </div>        
       </div>
-      <!-- text field TODO-->
+      <!-- text field -->
       <div class="row">
         <div class="col s3">
         </div>
           <div class="input-field col s6">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Textarea</label>
+          <textarea name="message" id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Message<i class="mdi mdi-pencil left"></i></label>
           </div>
         <div class="col s3">
         </div>        
+      </div>
+      <!-- BUTTON SUBMIT -->
+        <div class="row">
+          <div class="col s12 m12">
+           <p class="center-align"><button class="btn btn-large waves-effect waves-light" type="submit" name="action">Send Message</button></p>
+        </div>
       </div>
     </form>
 
   </div>
 </div>
+
+
+
+
+
+<!-- MODAL FOR VIDEO OPERATION -->
+  <div id="modalVideo" class="modal modal-fixed-footer" style="width: 90%; ">
+    <div class="modal-content">
+      <h4 class="center-align blue-text">COGIL®-ULTRACLEAN Complete Video series</h4>
+      <div class="row">
+
+          <p class="center-align"><iframe class="videoCogil" width="60%" style="height:315px" src="https://www.youtube.com/embed/videoseries?list=PL85251E4C561F480A" frameborder="0" allowfullscreen></iframe></p>
+     
+      </div>
+    </div><div class="divider"></div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close Window</a>
+    </div>
+  </div>
+
+
+<!-- MODAL FOR TECHNICAL LAYOUT -->
+  <div id="modalTechLayout" class="modal modal-fixed-footer" style="width: 90%; height: 2500px">
+    <div class="modal-content">
+      <h4 class="center-align blue-text">COGIL®-ULTRACLEAN Technical layout</h4>
+      <!-- solution one, embed pdf -->
+     <!--  <p class="center-align"><iframe id="fred" style="border:1px solid #666CCC" title="PDF in an i-Frame" src="./img/cogil_ultraclean_technical_layout.pdf" frameborder="1" scrolling="auto" height="315" width="70%" ></iframe></p> -->
+     <!-- solution two, embed png of pdf -->
+     <p class="center-align">
+      <img class="materialboxed" width="100%" src="./img/ultraclean_tech_layout.png">
+     </p>
+    </div><div class="divider"></div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close Window</a>
+      <a href="./img/cogil_ultraclean_technical_layout.pdf" download="cogil_ultraclean_dairy_filler" class=" modal-action modal-close waves-effect waves-green btn">Download PDF</a>
+    </div>
+  </div>
 
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
